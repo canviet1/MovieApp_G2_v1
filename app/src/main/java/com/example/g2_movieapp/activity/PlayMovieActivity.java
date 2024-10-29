@@ -29,7 +29,7 @@ import com.example.g2_movieapp.adapter.MovieListAdapter;
 import com.example.g2_movieapp.domain.Movie;
 import com.example.g2_movieapp.domain.MovieData;
 import com.example.g2_movieapp.domain.Response;
-import com.example.g2_movieapp.domain.user.TrailerResponse;
+import com.example.g2_movieapp.domain.TrailerResponse;
 import com.example.g2_movieapp.helper.Constant;
 import com.example.g2_movieapp.helper.GsonRequest;
 import com.example.g2_movieapp.helper.RequestQueueSingleton;
