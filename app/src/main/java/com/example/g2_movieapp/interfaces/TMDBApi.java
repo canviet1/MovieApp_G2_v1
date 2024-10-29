@@ -1,11 +1,18 @@
 package com.example.g2_movieapp.interfaces;
 
 
+import com.example.g2_movieapp.helper.task.LoginRequest;
+import com.example.g2_movieapp.helper.task.SessionRequest;
+import com.example.g2_movieapp.helper.task.SessionResponse;
+import com.example.g2_movieapp.helper.task.TokenResponse;
+import com.example.g2_movieapp.helper.task.ValidateTokenResponse;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
+
 
 public interface TMDBApi {
     @GET("authentication/token/new") // Phương thức để lấy token mới

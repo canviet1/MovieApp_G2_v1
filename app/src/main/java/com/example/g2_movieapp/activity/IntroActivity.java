@@ -24,8 +24,18 @@ public class IntroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
-
+        Button getinBtn = findViewById(R.id.getInBtn);
+        getinBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //startActivity(new Intent(IntroActivity.this, FavoriteList.class));
+                nextActivity();
+            }
+        });
     }
 
-
+    private void nextActivity() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
 }

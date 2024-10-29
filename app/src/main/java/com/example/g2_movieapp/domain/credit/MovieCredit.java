@@ -1,5 +1,4 @@
-
-package id.vn.minhlamdev.movieapp.domain.credit;
+package com.example.g2_movieapp.domain.credit;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

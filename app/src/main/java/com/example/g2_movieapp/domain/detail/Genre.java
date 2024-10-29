@@ -1,5 +1,5 @@
+package com.example.g2_movieapp.domain.detail;
 
-package id.vn.minhlamdev.movieapp.domain.detail;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

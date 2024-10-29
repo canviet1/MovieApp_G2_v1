@@ -1,4 +1,4 @@
-package id.vn.minhlamdev.movieapp.domain;
+package com.example.g2_movieapp.domain;
 
 import com.google.gson.annotations.SerializedName;
 

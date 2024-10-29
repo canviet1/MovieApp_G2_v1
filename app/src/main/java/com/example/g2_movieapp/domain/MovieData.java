@@ -1,9 +1,8 @@
-
-package id.vn.minhlamdev.movieapp.domain;
-
-import java.util.List;
+package com.example.g2_movieapp.domain;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
 
 public class MovieData {
 

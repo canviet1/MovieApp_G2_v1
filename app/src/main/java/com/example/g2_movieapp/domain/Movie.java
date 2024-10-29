@@ -1,5 +1,5 @@
+package com.example.g2_movieapp.domain;
 
-package id.vn.minhlamdev.movieapp.domain;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
