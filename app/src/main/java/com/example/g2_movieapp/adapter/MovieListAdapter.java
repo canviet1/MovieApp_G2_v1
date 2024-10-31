@@ -71,7 +71,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.View
         Movie movie = items.getResults().get(position);
         String movieId = movie.getId().toString();
 
-        holder.idTxt.setText(movieId);
+        holder.idTxt.setText(movieId); //setText
         holder.titleTxt.setText(movie.getTitle());
         holder.scoreTxt.setText(movie.getVoteAverage() == null ? "" : movie.getVoteAverage().toString());
 
