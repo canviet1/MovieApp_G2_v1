@@ -14,7 +14,8 @@ public class Constant {
         public static final String UPCOMMING_MOVIE_LIST = "https://api.themoviedb.org/3/movie/upcoming?api_key=5aa5ed76193d3d2a01f9f679885ec8d3&language=en-US&page=1";
         public static final String IMAGE = "https://image.tmdb.org/t/p/w500/";
         public static final String SEARCH_MOVIE = "https://api.themoviedb.org/3/search/movie";
-
+        public static final String POPULAR = "https://api.themoviedb.org/3/person/popular?api_key=5aa5ed76193d3d2a01f9f679885ec8d3&language=en-US&page=1";
+        public static final String ACTORMOVIECREDIT ="https://api.themoviedb.org/3/person/";
         public static String getFavoriteMoviesApi(Context context) {
             SharedPreferences sharedPreferences = context.getSharedPreferences(App.PREFS_SESSION, Context.MODE_PRIVATE);
             String Se_id = sharedPreferences.getString("session_id", "");
