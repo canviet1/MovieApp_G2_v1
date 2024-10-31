@@ -46,15 +46,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Kiểm tra session ID khi khởi chạy
-        SharedPreferences prefs = getSharedPreferences(Constant.App.PREFS_SESSION, Context.MODE_PRIVATE);
-        String sessionId = prefs.getString("session_id", null);
-
-        if (sessionId != null) {
-            // Nếu session ID tồn tại, chuyển tới MainActivity
-            navigateToMainActivity();
-            return;
-        }
+      
 
         // Nếu không có session ID, hiển thị giao diện đăng nhập
         setContentView(R.layout.activity_login);
