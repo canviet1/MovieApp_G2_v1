@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MovieApp"
         tools:targetApi="34">
         <activity
+            android:name=".activity.PopularActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.WatchListActivity"
             android:exported="false" />
         <activity
@@ -38,12 +41,15 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="myapp" android:host="callback" />
+
+                <data
+                    android:host="callback"
+                    android:scheme="myapp" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activity.DetailActivity"
             android:exported="false" />
