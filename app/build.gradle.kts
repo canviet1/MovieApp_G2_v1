@@ -85,4 +85,5 @@ dependencies {
 
     // ExoPlayer for video playback
     implementation("com.google.android.exoplayer:exoplayer:2.18.7")
+    implementation("com.google.android.material:material:1.8.0")
 }

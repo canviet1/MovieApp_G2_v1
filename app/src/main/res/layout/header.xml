@@ -2,53 +2,44 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp">
+    android:layout_gravity="bottom"
+    android:background="#2A2A2A"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/gradient_profile_background"
+        android:layout_height="731dp"
+        android:background="#2A2A2A"
         android:orientation="vertical"
         android:padding="20dp">
 
         <ImageView
             android:id="@+id/avatar"
+            android:layout_marginTop="100dp"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="121dp"
             android:layout_gravity="center"
             android:src="@drawable/account"
-            app:shapeAppearanceOverlay="@style/Animation.Design.BottomSheetDialog"/>
+            app:shapeAppearanceOverlay="@style/Animation.Design.BottomSheetDialog" />
 
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Minh Dinh"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="MinhDDHE176148@fpt.edu.vn"
+            android:text="DuongDMHE172131@fpt.edu.vn"
             android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="14sp"/>
+            android:textColor="@color/white"
+            android:textSize="25sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
@@ -56,18 +47,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Danh sách phim đang xem"
-                app:cornerRadius="4dp"
-                app:backgroundTint="@color/black"
-                android:textColor="@color/white" />
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="4dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/favorite_list_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Danh sách phim yêu thích"
-                app:cornerRadius="4dp"
-                app:backgroundTint="@color/black"
-                android:textColor="@color/white" />
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="4dp" />
 
         </LinearLayout>
 
@@ -77,8 +68,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Đăng xuất"
-            app:cornerRadius="4dp"
-            app:backgroundTint="@color/design_default_color_error"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            app:backgroundTint="#D32F2F"
+            app:cornerRadius="4dp" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity implements TaskCallback {
         View headerView = navigationView.getHeaderView(0);
         profileNameTxt = headerView.findViewById(R.id.username);
         profileImage = headerView.findViewById(R.id.avatar);
-        profileEmailTxt = headerView.findViewById(R.id.name);
+      //  profileEmailTxt = headerView.findViewById(R.id.name);
         logout = headerView.findViewById(R.id.logout_button);
         watchlist = headerView.findViewById(R.id.watch_list_button);
         favoriteList = headerView.findViewById(R.id.favorite_list_button);
@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements TaskCallback {
                     Log.i("request api: ", "get api success");
 
                     profileNameTxt.setText(user.getUsername());
-                    profileEmailTxt.setText(user.getName());
+                 //   profileEmailTxt.setText(user.getName());
                     if (user.getAvatar().getTmdb().getAvatarPath() != null) {
                         Glide.with(MainActivity.this)
                                 .load(Constant.API.IMAGE + response.getAvatar().getTmdb().getAvatarPath())
