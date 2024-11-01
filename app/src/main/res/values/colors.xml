@@ -27,4 +27,6 @@
 
     <!-- Màu nhấn nổi bật -->
     <color name="accent">#BB86FC</color>
+    <color name="red">#FF0000</color>
+
 </resources>
