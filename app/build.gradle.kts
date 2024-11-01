@@ -34,6 +34,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.activity)
     val ext = object {
         val roomVersion = "2.6.1"
         val appCompatVersion = "1.6.1"

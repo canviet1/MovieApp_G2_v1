@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/actorProfileImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/actorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actor Name"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/actorCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Character"
+        android:textSize="16sp"
+        android:textColor="#777" />
+
+</LinearLayout>
