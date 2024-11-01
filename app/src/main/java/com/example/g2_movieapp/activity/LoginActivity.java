@@ -35,6 +35,7 @@ import com.example.g2_movieapp.interfaces.TMDBApi;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText userEdt, passEdt;
+    private TextView registerBtn;
     private Button loginBtn;
     private ProgressBar loadingBar;
     private WebView webView;
@@ -42,11 +43,19 @@ public class LoginActivity extends AppCompatActivity {
     private final String apiKey = "5aa5ed76193d3d2a01f9f679885ec8d3";
     private TMDBApi tmdbApi;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Kiểm tra session ID khi khởi chạy
+        SharedPreferences prefs = getSharedPreferences(Constant.App.PREFS_SESSION, Context.MODE_PRIVATE);
+        String sessionId = prefs.getString("session_id", null);
 
-      
+        if (sessionId != null) {
+            // Nếu session ID tồn tại, chuyển tới MainActivity
+            navigateToMainActivity();
+            return;
+        }
 
         // Nếu không có session ID, hiển thị giao diện đăng nhập
         setContentView(R.layout.activity_login);
@@ -54,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
         userEdt = findViewById(R.id.editUsername);
         passEdt = findViewById(R.id.editPassword);
         loginBtn = findViewById(R.id.btnLogin);
+        registerBtn = findViewById(R.id.textRegisterNow);
         loadingBar = findViewById(R.id.loadingLogin);
         webView = findViewById(R.id.webView); // Thêm WebView vào layout
 
@@ -73,7 +83,28 @@ public class LoginActivity extends AppCompatActivity {
                 getNewToken();
             }
         });
+        registerBtn.setOnClickListener(v -> openRegistrationPage());
+    }
+    private void openRegistrationPage() {
+        // Hiển thị trang đăng ký TMDB trong WebView
+        webView.setVisibility(View.VISIBLE);
+        webView.getSettings().setJavaScriptEnabled(true);
 
+        // Cài đặt WebView để xử lý các liên kết
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                return false; // Để WebView tự xử lý URL
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                Log.d("WebView", "Page loaded: " + url);
+            }
+        });
+
+        // Tải trang đăng ký của TMDB
+        webView.loadUrl("https://www.themoviedb.org/signup");
     }
 
     private void getNewToken() {
@@ -106,7 +137,6 @@ public class LoginActivity extends AppCompatActivity {
         editor.putString("request_token", token); // Or "access_token" if applicable
         editor.apply();
     }
-
 
     private String approvedToken = null;
 
