@@ -35,6 +35,7 @@ import com.shashank.sony.fancytoastlib.FancyToast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.ViewHolder> implements OnHeartClickListener {
 
     private MovieData items;
@@ -62,15 +63,15 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.View
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View inflate = LayoutInflater.from(parent.getContext()).inflate(layoutResourceId, parent, false);
         context = parent.getContext();
-        return new MovieListAdapter.ViewHolder(inflate);
+        return new ViewHolder(inflate);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MovieListAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Movie movie = items.getResults().get(position);
         String movieId = movie.getId().toString();
 
-        holder.idTxt.setText(movieId);
+        holder.idTxt.setText(movieId); //setText
         holder.titleTxt.setText(movie.getTitle());
         holder.scoreTxt.setText(movie.getVoteAverage() == null ? "" : movie.getVoteAverage().toString());
 
@@ -197,3 +198,4 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.View
         }
     }
 }
+
