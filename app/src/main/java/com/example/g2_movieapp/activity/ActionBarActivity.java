@@ -17,6 +17,7 @@ import com.example.g2_movieapp.R;
 
 public class ActionBarActivity extends AppCompatActivity {
 
+
     public void setupActionBar(final Activity activity) {
         ImageView fvList = activity.findViewById(R.id.fvList);
         ImageView trend = activity.findViewById(R.id.home);
