@@ -17,6 +17,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.util.Log;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements TaskCallback {
     ImageView profileImage;
     MaterialButton logout, watchlist, favoriteList;
     SharedPreferences sharedPreferences;
-
+    private Button btn_po;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -177,6 +178,15 @@ public class MainActivity extends AppCompatActivity implements TaskCallback {
         logout = headerView.findViewById(R.id.logout_button);
         watchlist = headerView.findViewById(R.id.watch_list_button);
         favoriteList = headerView.findViewById(R.id.favorite_list_button);
+        btn_po = headerView.findViewById(R.id.btn_popular);
+        btn_po.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+                Intent intent = new Intent(context, PopularActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     public void logout() {

@@ -34,7 +34,7 @@ public class FavoriteList extends AppCompatActivity implements TaskCallback {
     private ProgressBar loading;
     private EditText etSearch;
     private MovieData favoriteMovies;
-    private Button btn_po;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,15 +43,7 @@ public class FavoriteList extends AppCompatActivity implements TaskCallback {
         initView();
         sendRequest();
         event();
-        btn_po = findViewById(R.id.btn_popular);
-        btn_po.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(FavoriteList.this, PopularActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
     }
 
     private void sendRequest() {
