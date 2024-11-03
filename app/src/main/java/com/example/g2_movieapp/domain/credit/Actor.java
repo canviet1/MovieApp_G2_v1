@@ -1,8 +1,11 @@
 package com.example.g2_movieapp.domain.credit;
 
 
+import com.example.g2_movieapp.domain.Movie;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
 
 public class Actor {
     @SerializedName("adult")
@@ -38,6 +41,8 @@ public class Actor {
     @SerializedName("credit_id")
     @Expose
     private String creditId;
+    @SerializedName("known_for")
+    private List<Movie> knownFor; // Giả sử bạn đã có lớp Movie
     @SerializedName("order")
     @Expose
     private Integer order;
@@ -136,6 +141,13 @@ public class Actor {
 
     public void setOrder(Integer order) {
         this.order = order;
+    }
+    public List<Movie> getKnownFor() {
+        return knownFor;
+    }
+
+    public void setKnownFor(List<Movie> knownFor) {
+        this.knownFor = knownFor;
     }
 
 }
