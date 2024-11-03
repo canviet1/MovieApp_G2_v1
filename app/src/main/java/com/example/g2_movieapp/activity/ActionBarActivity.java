@@ -23,7 +23,7 @@ public class ActionBarActivity extends AppCompatActivity {
         ImageView trend = activity.findViewById(R.id.home);
         ImageView watchlist = activity.findViewById(R.id.watchlist);
         ImageView search = activity.findViewById(R.id.search);
-
+	// favourite
         fvList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,6 +31,7 @@ public class ActionBarActivity extends AppCompatActivity {
                 activity.startActivity(intent);
             }
         });
+        // trend
         trend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,6 +39,7 @@ public class ActionBarActivity extends AppCompatActivity {
                 activity.startActivity(intent);
             }
         });
+        // watched list
         watchlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,6 +47,7 @@ public class ActionBarActivity extends AppCompatActivity {
                 activity.startActivity(intent);
             }
         });
+        //search
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

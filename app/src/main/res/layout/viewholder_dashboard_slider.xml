@@ -17,7 +17,7 @@
         android:minHeight="300dp"
         android:adjustViewBounds="false"
 
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"  />
 
 <!--    lack 2 attributes-->
     <Button
@@ -31,7 +31,7 @@
         android:layout_margin="8dp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"  />
 
     <TextView
         android:id="@+id/voteCount"
@@ -47,7 +47,7 @@
         android:textColor="@color/white"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/year" />
+        app:layout_constraintStart_toEndOf="@+id/year"  />
 
     <TextView
         android:id="@+id/year"
@@ -63,7 +63,7 @@
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"  />
 
     <TextView
         android:id="@+id/time"

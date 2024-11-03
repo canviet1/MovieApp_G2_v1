@@ -12,14 +12,14 @@
         android:paddingRight="24dp"
         android:paddingLeft="16dp"
         android:layout_marginTop="20dp"
-        android:id="@+id/toast_type">
+        android:id="@+id/toast_type" >
 
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:id="@+id/toast_icon"
             android:layout_gravity="center"
-            android:src="@drawable/ic_info_outline_black_24dp" />
+            android:src="@drawable/ic_info_outline_black_24dp"  />
 
         <TextView
             android:id="@+id/toast_text"
@@ -27,7 +27,7 @@
             android:textColor="#FFFFFF"
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"  />
     </LinearLayout>
 
     <ImageView
@@ -36,5 +36,5 @@
         android:layout_height="28dp"
         android:src="@drawable/androidicon"
         android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/toast_type" />
+        android:layout_alignEnd="@+id/toast_type"  />
 </RelativeLayout>
