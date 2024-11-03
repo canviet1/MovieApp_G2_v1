@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MovieApp"
         tools:targetApi="34">
         <activity
+            android:name=".activity.ActorDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.PopularActivity"
             android:exported="false" />
         <activity
