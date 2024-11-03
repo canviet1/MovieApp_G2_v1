@@ -9,21 +9,20 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/appBar"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_gravity="bottom"
-            android:backgroundTint="#282f32">
+            android:backgroundTint="#282f32"
+            android:layout_gravity="bottom">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/home"
@@ -33,7 +32,8 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/home"
-                    />
+                    app:tint="@color/white"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
 
                 <ImageView
                     android:id="@+id/search"
@@ -43,7 +43,8 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/search"
-                  />
+                    app:tint="@color/white"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
 
                 <ImageView
                     android:id="@+id/imageView10"
@@ -53,7 +54,8 @@
                     android:layout_weight="1"
                     android:visibility="invisible"
                     app:srcCompat="@drawable/btn_3"
-                     />
+
+                    android:background="?attr/selectableItemBackgroundBorderless" />
 
                 <ImageView
                     android:id="@+id/fvList"
@@ -63,7 +65,8 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/btn_2"
-                />
+
+                    android:background="?attr/selectableItemBackgroundBorderless" />
 
                 <ImageView
                     android:id="@+id/watchlist"
@@ -71,23 +74,24 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="17dp"
-                    android:layout_marginRight="18dp"
                     android:layout_marginBottom="17dp"
+                    android:layout_marginRight="18dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/book"
-                />
+                    app:tint="@color/white"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
 
             </LinearLayout>
 
         </com.google.android.material.bottomappbar.BottomAppBar>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            style="@style/Floating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="floating"
+            app:maxImageSize="30dp"
             app:layout_anchor="@id/appBar"
-            app:maxImageSize="30dp" />
+            style="@style/Floating"
+            android:contentDescription="floating" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
