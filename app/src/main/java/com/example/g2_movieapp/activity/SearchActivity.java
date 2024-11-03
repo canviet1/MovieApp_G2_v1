@@ -1,6 +1,8 @@
 package com.example.g2_movieapp.activity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -54,14 +56,21 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void event() {
-        etSearch.setOnKeyListener((v, keyCode, event) -> {
+        etSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
-            if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN) {
-                String searchString = etSearch.getText().toString();
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                String searchString = s.toString();
                 sendRequest(searchString);
             }
 
-            return true;
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
         });
     }
 
