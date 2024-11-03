@@ -120,10 +120,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.View
     public int getItemCount() {
         return items.getResults().size();
     }
-
-//    private void updateFavoriteStatus(boolean isFav) {
-//
-//    }
+    
 
     @Override
     public void onHeartClick(int movieId, boolean fav) {
