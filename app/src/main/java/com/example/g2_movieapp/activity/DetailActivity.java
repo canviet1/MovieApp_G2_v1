@@ -108,7 +108,7 @@ public class DetailActivity extends AppCompatActivity implements OnHeartClickLis
     }
 
     private void getMovieActors() {
-        String url = Constant.API.GET_MOVIE + idMovie + "/credits";
+        String url = Constant.API.GET_MOVIE + idMovie + "/credits?api_key=5aa5ed76193d3d2a01f9f679885ec8d3";
 
         GsonRequest<MovieCreditsResponse> gsonRequest = new GsonRequest<>(
                 this,
