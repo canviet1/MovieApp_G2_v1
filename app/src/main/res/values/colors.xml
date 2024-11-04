@@ -12,7 +12,11 @@
     <color name="green">#D1E3D2</color>
     <color name="gray">#808080</color>
     <color name="favorite_color">#FF4081</color>
+    <color name="shy_rainbow">#1d7365</color>
+    <color name="rainbow">#E50914</color>
+    <color name="kang">#a74881</color>
     <color name="non_favorite_color">#FFFFFF</color>
+
 
     <color name="dark_background">#121212</color>
 
