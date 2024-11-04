@@ -51,6 +51,7 @@ public class WatchListActivity extends AppCompatActivity implements TaskCallback
                 response -> {
                     Log.i("request api: ", "get api success");
                     loading.setVisibility(View.GONE);
+                    watchListMovies = (MovieData) response;
                     TaskCallback taskCallback = this;
                     adapterWatchList = new MovieListAdapter((MovieData) response, R.layout.viewholder_film, taskCallback);
                     recyclerViewWatchList.setAdapter(adapterWatchList);

@@ -41,7 +41,6 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginBtn;
     private ProgressBar loadingBar;
     private WebView webView;
-    private SharedPreferences sharedPreferences;
     private String apiKey = BuildConfig.TMDB_API_KEY;
     private TMDBApi tmdbApi;
 
@@ -61,7 +60,6 @@ public class LoginActivity extends AppCompatActivity {
 
         // Nếu không có session ID, hiển thị giao diện đăng nhập
         setContentView(R.layout.activity_login);
-
         userEdt = findViewById(R.id.editUsername);
         passEdt = findViewById(R.id.editPassword);
         loginBtn = findViewById(R.id.btnLogin);
