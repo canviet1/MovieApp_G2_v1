@@ -81,46 +81,6 @@ public class PlayMovieActivity extends AppCompatActivity implements OnHeartClick
         description = findViewById(R.id.description);
         loading = findViewById(R.id.loadingRecommendation);
     }
-    private void sendRequest2() {
-        loading.setVisibility(View.VISIBLE);
-
-        String url = Constant.API.GET_MOVIE + idMovie+"?api_key=5aa5ed76193d3d2a01f9f679885ec8d3&language=en-US&page=1";
-        GsonRequest<Movie> gsonRequest = new GsonRequest<>(this, Request.Method.GET,url,Movie.class,null,
-                response -> {
-                    loading.setVisibility(View.GONE);
-                    Movie movie = response;
-
-                    movieName.setText(movie.getTitle());
-                    description.setText(movie.getOverview());
-                },
-                error -> {
-                    loading.setVisibility(View.GONE);
-                    Log.e("VOLLEY", "Error: " + error.getMessage());
-                    Toast.makeText(context, "Failed to load movie details", Toast.LENGTH_SHORT).show();
-                }
-        );
-
-        RequestQueueSingleton.getInstance(this).addToRequestQueue(gsonRequest);
-    }
-    private void sendRequest1() {
-        loading.setVisibility(View.VISIBLE);
-        SharedPreferences prefs = getSharedPreferences(Constant.App.PREFS_SESSION, Context.MODE_PRIVATE);
-        String Se_id = prefs.getString("session_id","");
-        String url = Constant.API.GET_RECOMMENDATIONS.replace("{id}", String.valueOf(idMovie))+Se_id;
-
-        GsonRequest<MovieData> gsonRequest = new GsonRequest(this, Request.Method.GET, url, MovieData.class,
-                response -> {
-                    Log.i("request api: ", "get api success");
-                    loading.setVisibility(View.GONE);
-                    adapter = new MovieListAdapter((MovieData) response, R.layout.viewholder_film, null);
-                    recyclerView.setAdapter(adapter);
-                }, error -> {
-            Log.i("request api error: ", error.getMessage());
-            loading.setVisibility(View.GONE);
-        });
-
-        RequestQueueSingleton.getInstance(this).addToRequestQueue(gsonRequest);
-    }
 
     private void sendRequest() {
         String url = Constant.API.GET_MOVIE_VIDEOS(idMovie);
@@ -142,6 +102,48 @@ public class PlayMovieActivity extends AppCompatActivity implements OnHeartClick
         RequestQueueSingleton.getInstance(this).addToRequestQueue(gsonRequest);
     }
 
+    private void sendRequest1() {
+        loading.setVisibility(View.VISIBLE);
+        SharedPreferences prefs = getSharedPreferences(Constant.App.PREFS_SESSION, Context.MODE_PRIVATE);
+        String Se_id = prefs.getString("session_id","");
+        String url = Constant.API.GET_RECOMMENDATIONS.replace("{id}", String.valueOf(idMovie))+Se_id;
+
+        GsonRequest<MovieData> gsonRequest = new GsonRequest(this, Request.Method.GET, url, MovieData.class,
+                response -> {
+                    Log.i("request api: ", "get api success");
+                    loading.setVisibility(View.GONE);
+                    adapter = new MovieListAdapter((MovieData) response, R.layout.viewholder_film, null);
+                    recyclerView.setAdapter(adapter);
+                }, error -> {
+            Log.i("request api error: ", error.getMessage());
+            loading.setVisibility(View.GONE);
+        });
+
+        RequestQueueSingleton.getInstance(this).addToRequestQueue(gsonRequest);
+    }
+
+    private void sendRequest2() {
+        loading.setVisibility(View.VISIBLE);
+
+        String url = Constant.API.GET_MOVIE + idMovie+"?api_key=5aa5ed76193d3d2a01f9f679885ec8d3&language=en-US&page=1";
+        GsonRequest<Movie> gsonRequest = new GsonRequest<>(this, Request.Method.GET,url,Movie.class,null,
+                response -> {
+                    loading.setVisibility(View.GONE);
+                    Movie movie = response;
+
+                    movieName.setText(movie.getTitle());
+                    description.setText(movie.getOverview());
+                },
+                error -> {
+                    loading.setVisibility(View.GONE);
+                    Log.e("VOLLEY", "Error: " + error.getMessage());
+                    Toast.makeText(context, "Failed to load movie details", Toast.LENGTH_SHORT).show();
+                }
+        );
+
+        RequestQueueSingleton.getInstance(this).addToRequestQueue(gsonRequest);
+    }
+    
     private void playMovie(String movieKey) {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
