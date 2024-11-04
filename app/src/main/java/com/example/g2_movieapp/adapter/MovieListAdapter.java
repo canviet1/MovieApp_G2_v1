@@ -44,6 +44,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.View
     private String favoriteMovieString;
     private TaskCallback taskCallback;
 
+    //constructor
     public MovieListAdapter(MovieData items, int layoutResourceId, @Nullable TaskCallback taskCallback) {
         this.items = items;
         this.layoutResourceId = layoutResourceId;

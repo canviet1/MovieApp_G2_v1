@@ -1,20 +1,19 @@
 package com.example.g2_movieapp.activity;
 
-
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.g2_movieapp.R;
-
 
 public class ActionBarActivity extends AppCompatActivity {
 
@@ -24,7 +23,9 @@ public class ActionBarActivity extends AppCompatActivity {
         ImageView trend = activity.findViewById(R.id.home);
         ImageView watchlist = activity.findViewById(R.id.watchlist);
         ImageView search = activity.findViewById(R.id.search);
-	// favourite
+        ImageView floatingButton = activity.findViewById(R.id.floatingActionButton); // Thêm ImageView cho FAB
+
+        // favourite
         fvList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,6 +33,7 @@ public class ActionBarActivity extends AppCompatActivity {
                 activity.startActivity(intent);
             }
         });
+
         // trend
         trend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +42,7 @@ public class ActionBarActivity extends AppCompatActivity {
                 activity.startActivity(intent);
             }
         });
+
         // watched list
         watchlist.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +51,8 @@ public class ActionBarActivity extends AppCompatActivity {
                 activity.startActivity(intent);
             }
         });
-        //search
+
+        // search
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +60,7 @@ public class ActionBarActivity extends AppCompatActivity {
                 activity.startActivity(intent);
             }
         });
-    }
 
+
+    }
 }

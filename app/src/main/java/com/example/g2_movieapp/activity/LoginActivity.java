@@ -1,5 +1,7 @@
 package com.example.g2_movieapp.activity;
 import android.content.Context;
+
+import com.example.g2_movieapp.BuildConfig;
 import com.example.g2_movieapp.helper.Constant;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressBar loadingBar;
     private WebView webView;
     private SharedPreferences sharedPreferences;
-    private final String apiKey = "5aa5ed76193d3d2a01f9f679885ec8d3";
+    private String apiKey = BuildConfig.TMDB_API_KEY;
     private TMDBApi tmdbApi;
 
 
