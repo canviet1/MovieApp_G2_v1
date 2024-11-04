@@ -22,15 +22,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:weightSum="5"> <!-- Đặt tổng trọng số bằng 5 cho 5 icon -->
 
                 <ImageView
                     android:id="@+id/home"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="5dp"
+                    android:layout_height="30dp"
                     android:layout_weight="1"
+                    android:layout_margin="5dp"
                     app:srcCompat="@drawable/home"
                     app:tint="@color/white"
                     android:background="?attr/selectableItemBackgroundBorderless" />
@@ -38,10 +38,9 @@
                 <ImageView
                     android:id="@+id/search"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="5dp"
+                    android:layout_height="30dp"
                     android:layout_weight="1"
+                    android:layout_margin="5dp"
                     app:srcCompat="@drawable/search"
                     app:tint="@color/white"
                     android:background="?attr/selectableItemBackgroundBorderless" />
@@ -49,34 +48,27 @@
                 <ImageView
                     android:id="@+id/imageView10"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_height="30dp"
                     android:layout_weight="1"
                     android:visibility="invisible"
                     app:srcCompat="@drawable/btn_3"
-
                     android:background="?attr/selectableItemBackgroundBorderless" />
 
                 <ImageView
                     android:id="@+id/fvList"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="5dp"
+                    android:layout_height="30dp"
                     android:layout_weight="1"
+                    android:layout_margin="5dp"
                     app:srcCompat="@drawable/btn_2"
-
                     android:background="?attr/selectableItemBackgroundBorderless" />
 
                 <ImageView
                     android:id="@+id/watchlist"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="17dp"
-                    android:layout_marginBottom="17dp"
-                    android:layout_marginRight="18dp"
+                    android:layout_height="30dp"
                     android:layout_weight="1"
+                    android:layout_margin="5dp"
                     app:srcCompat="@drawable/book"
                     app:tint="@color/white"
                     android:background="?attr/selectableItemBackgroundBorderless" />
