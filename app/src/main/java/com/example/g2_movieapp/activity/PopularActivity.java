@@ -30,8 +30,6 @@ public class PopularActivity extends AppCompatActivity implements TaskCallback {
     private RecyclerView.Adapter adapterActorList;
     private RecyclerView recyclerView;
     private ProgressBar loading;
-    private EditText etSearch;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +41,6 @@ public class PopularActivity extends AppCompatActivity implements TaskCallback {
         int spanCount = 4;
         recyclerView.setLayoutManager(new GridLayoutManager(this, spanCount));
         loading = findViewById(R.id.loadingFav);
-        etSearch = findViewById(R.id.editTextText);
         ActionBarActivity actionbar = new ActionBarActivity();
         actionbar.setupActionBar(this);
 

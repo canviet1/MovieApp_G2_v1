@@ -59,6 +59,14 @@
                 android:textColor="@color/black"
                 app:backgroundTint="@color/white"
                 app:cornerRadius="4dp" />
+            <Button
+                android:id="@+id/btn_popular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="4dp"
+                android:text="Popular" />
 
         </LinearLayout>
 

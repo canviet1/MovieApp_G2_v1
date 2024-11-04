@@ -6,15 +6,19 @@ plugins {
 android {
     namespace = "com.example.g2_movieapp"
     compileSdk = 34
-
+    buildFeatures {
+        buildConfig = true
+    }
     defaultConfig {
         applicationId = "com.example.g2_movieapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // API Key vào BuildConfig
+        buildConfigField("String", "TMDB_API_KEY", "\"5aa5ed76193d3d2a01f9f679885ec8d3\"")
     }
 
     buildTypes {

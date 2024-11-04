@@ -239,6 +239,5 @@ public class DetailActivity extends AppCompatActivity implements OnHeartClickLis
 
     @Override
     public void onFailure(String errorMess) {
-
     }
 }
